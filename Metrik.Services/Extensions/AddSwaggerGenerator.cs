@@ -1,10 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Swashbuckle.AspNetCore.Filters;
 
 namespace Metrik.Services.Extensions
 {
@@ -14,31 +10,36 @@ namespace Metrik.Services.Extensions
         public static void AddSwaggerGenerator(this IServiceCollection services)
         {
 
-            services.AddSwaggerGen(options =>
+            services.AddSwaggerGen(opt =>
             {
-                options.SwaggerDoc("v1", new OpenApiInfo { Title = "Havelsan Metrik API", Version = "v1" });
-                options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                opt.SwaggerDoc("v1", new OpenApiInfo { Title = "Metrik API", Version = "v1" });
+                opt.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     In = ParameterLocation.Header,
-                    Description = "Please insert JWT with Bearer into field",
+                    Description = "Please enter token",
                     Name = "Authorization",
-                    Type = SecuritySchemeType.ApiKey
+                    Type = SecuritySchemeType.Http,
+                    BearerFormat = "JWT",
+                    Scheme = "bearer"
                 });
 
-                options.AddSecurityRequirement(new OpenApiSecurityRequirement
-            {
+                opt.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {
-                    new OpenApiSecurityScheme
                     {
-                        Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "Bearer" }
-                    },
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type=ReferenceType.SecurityScheme,
+                                Id="Bearer"
+                            }
+                        },
+                        new string[]{}
+                    }
+                });
 
-                    new string[] {}
-                }
+                opt.OperationFilter<SecurityRequirementsOperationFilter>();
             });
-            });
-
         }
-
     }
 }
