@@ -14,16 +14,19 @@ namespace Metrik.API.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
-        private IConfiguration _config;
+        private readonly IConfiguration _config;
         private readonly IUserService _userService;
+        private readonly ITokenService _tokenService;
 
-        public LoginController(IConfiguration config, IUserService userService)
+
+        public LoginController(IConfiguration config, IUserService userService, ITokenService tokenService)
         {
             _config = config;
             _userService = userService;
+            _tokenService = tokenService;
         }
 
-        private async Task<bool> AuthenticateUser(UserLoginDto user)
+        private async Task<bool>? AuthenticateUser(UserLoginDto user)
         {
             var _user = await _userService.Get(user.Email);
             if (_user.ResultStatus==ResultStatus.Success)
@@ -31,19 +34,6 @@ namespace Metrik.API.Controllers
                 return true;
             }
             return false;
-        }
-
-        private string GenerateToken(UserLoginDto users)
-        {
-            var securitykey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:SecretKey"]));
-            var credentials = new SigningCredentials(securitykey, SecurityAlgorithms.HmacSha256);
-            var token = new JwtSecurityToken(
-                _config["Jwt:Issuer"],
-                _config["Jwt:Audience"],
-                null,
-                expires: DateTime.Now.AddMinutes(1),
-                signingCredentials: credentials);
-            return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
         [AllowAnonymous]
@@ -54,7 +44,7 @@ namespace Metrik.API.Controllers
             IActionResult response = Unauthorized();
             if (await AuthenticateUser(user))
             {
-                var token = GenerateToken(user);
+                var token = _tokenService.CreateToken(user);
                 response = Ok(new { token = token });
             }
 

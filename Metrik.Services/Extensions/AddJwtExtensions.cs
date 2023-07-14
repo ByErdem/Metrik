@@ -27,7 +27,6 @@ public static class AddJwtExtensions
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:SecretKey"]))
                 };
             });
-
     }
 
 }
