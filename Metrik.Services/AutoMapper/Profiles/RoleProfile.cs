@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Metrik.Entities.Concrete;
-using Metrik.Entities.Dtos;
+using Metrik.Entities.Dtos.RoleDtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;

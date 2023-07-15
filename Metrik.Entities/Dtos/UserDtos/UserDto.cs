@@ -6,10 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Metrik.Entities.Dtos
+namespace Metrik.Entities.Dtos.UserDtos
 {
-    public class RoleListDto : DtoGetBase
+    public class UserDto : DtoGetBase
     {
-        public IList<Role> Roles { get; set; }
+        public User User { get; set; }
     }
 }

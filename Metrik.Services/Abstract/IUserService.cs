@@ -1,4 +1,4 @@
-﻿using Metrik.Entities.Dtos;
+﻿using Metrik.Entities.Dtos.UserDtos;
 using Metrik.Shared.Utilities.Results.Abstract;
 using System;
 using System.Collections.Generic;

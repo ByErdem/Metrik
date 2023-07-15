@@ -22,8 +22,7 @@ namespace Metrik.Services.Extensions
             sc.AddSingleton<ITokenService, TokenManager>();
             sc.AddAutoMapper(typeof(RoleProfile), typeof(UserProfile));
             sc.AddSwaggerGenerator();
-            sc.AddControllers(opt => opt.Filters.Add(new AuthorizeFilter()));
-            sc.AddEndpointsApiExplorer();
+            
             return sc;
         }
     }

@@ -1,4 +1,4 @@
-﻿using Metrik.Entities.Dtos;
+﻿using Metrik.Entities.Dtos.UserDtos;
 using Metrik.Services.Abstract;
 using Metrik.Shared.Utilities.ComplexTypes;
 using Microsoft.AspNetCore.Authorization;

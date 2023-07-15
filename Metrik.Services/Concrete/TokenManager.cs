@@ -1,4 +1,4 @@
-﻿using Metrik.Entities.Dtos;
+﻿using Metrik.Entities.Dtos.UserDtos;
 using Metrik.Services.Abstract;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Metrik.Data.Abstract;
 using Metrik.Entities.Concrete;
-using Metrik.Entities.Dtos;
+using Metrik.Entities.Dtos.UserDtos;
 using Metrik.Services.Abstract;
 using Metrik.Shared.Utilities.ComplexTypes;
 using Metrik.Shared.Utilities.Results.Abstract;

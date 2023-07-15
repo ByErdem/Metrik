@@ -1,4 +1,4 @@
-﻿using Metrik.Entities.Dtos;
+﻿using Metrik.Entities.Dtos.UserDtos;
 
 namespace Metrik.Services.Abstract;
 

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Metrik.Entities.Dtos
+namespace Metrik.Entities.Dtos.RoleDtos
 {
     public class RoleDto : DtoGetBase
     {
