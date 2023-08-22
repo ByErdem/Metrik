@@ -3,19 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metrik.Shared", "Metrik.Shared\Metrik.Shared.csproj", "{AC3F4264-7FCC-42A4-A7A5-8F11EEAF6A69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Metrik.Shared", "Metrik.Shared\Metrik.Shared.csproj", "{AC3F4264-7FCC-42A4-A7A5-8F11EEAF6A69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metrik.Services", "Metrik.Services\Metrik.Services.csproj", "{A9417FCE-E1B3-4C35-A8B4-9C858E48F1C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Metrik.Services", "Metrik.Services\Metrik.Services.csproj", "{A9417FCE-E1B3-4C35-A8B4-9C858E48F1C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metrik.Entities", "Metrik.Entities\Metrik.Entities.csproj", "{D3A8381D-9500-4736-9671-BC89773B9669}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Metrik.Entities", "Metrik.Entities\Metrik.Entities.csproj", "{D3A8381D-9500-4736-9671-BC89773B9669}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metrik.Data", "Metrik.Data\Metrik.Data.csproj", "{093BAA47-1A46-40E8-8CC5-4088A098C568}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Metrik.Data", "Metrik.Data\Metrik.Data.csproj", "{093BAA47-1A46-40E8-8CC5-4088A098C568}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metrik.API", "Metrik.API\Metrik.API.csproj", "{6634466E-0A88-410F-8764-21ABDBC63C2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Metrik.API", "Metrik.API\Metrik.API.csproj", "{6634466E-0A88-410F-8764-21ABDBC63C2E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F6F3718B-3D27-4A62-94F7-CBC831AA4BB2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metrik.Mvc", "Metrik.Mvc\Metrik.Mvc.csproj", "{3894E52A-4269-4FAA-BA5D-6497DFEF69DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,10 +41,6 @@ Global
 		{6634466E-0A88-410F-8764-21ABDBC63C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6634466E-0A88-410F-8764-21ABDBC63C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6634466E-0A88-410F-8764-21ABDBC63C2E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3894E52A-4269-4FAA-BA5D-6497DFEF69DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3894E52A-4269-4FAA-BA5D-6497DFEF69DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3894E52A-4269-4FAA-BA5D-6497DFEF69DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3894E52A-4269-4FAA-BA5D-6497DFEF69DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
